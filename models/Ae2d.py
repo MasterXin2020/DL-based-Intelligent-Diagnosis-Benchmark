@@ -25,7 +25,7 @@ class encoder(nn.Module):
             nn.ReLU(inplace=True))
 
         self.conv4 = nn.Sequential(
-            nn.Conv2d(32, 32, kernel_size=3, stride=1, padding=1),
+            nn.Conv2d(32,32, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(32),
             nn.ReLU(inplace=True))
 
@@ -59,12 +59,12 @@ class decoder(nn.Module):
             nn.ReLU(inplace=True))
 
         self.deconv3 = nn.Sequential(
-            nn.ConvTranspose2d(32, 32, kernel_size=2, stride=2, padding=0),
+            nn.ConvTranspose2d(32, 3, kernel_size=2, stride=2, padding=0),
             nn.BatchNorm2d(32),
             nn.ReLU(inplace=True))
 
         self.deconv4 = nn.Sequential(
-            nn.ConvTranspose2d(32, 32, kernel_size=3, stride=1, padding=1),
+            nn.ConvTranspose2d(3, 1, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(32),
             nn.ReLU(inplace=True))
 
